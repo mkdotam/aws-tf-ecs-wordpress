@@ -29,12 +29,11 @@ Database credentials would be generated automatically and stored in Secrets Mana
 ### Prerequisites
 
 To deploy this project succesfully you will need to have installed on your machine:
-* terragrunt (v0.32.2), 
 * terraform (v1.0.7) 
 * python3 (preferrable 3.8)
 * ~/.aws/[config|credentials] should contain correct profile information for your AWS account.
 
-Note: You can use `tfenv` and `tgenv` command line tools to manage terraform and terragrunt versions respectively.
+Note: You can use [tfenv](https://github.com/tfutils/tfenv) command line tools to manage terraform versions respectively.
 
 ### Deployment
 
