@@ -35,3 +35,4 @@ terraform.rc
 
 .vscode/*
 pluralith.*
+.terraform.lock.hcl
