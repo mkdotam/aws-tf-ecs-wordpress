@@ -39,26 +39,27 @@ Note: You can use `tfenv` and `tgenv` command line tools to manage terraform and
 ### Deployment
 
 Please make sure you've exported right AWS_PROFILE shell variable.
-
-‼️ Before starting with deployment make sure you've reviewed `./infra/terragrunt.hcl` file and 
-updated S3 bucket name to store your remote terraform state.
-Please also adjust project name and environment variables, depending on your needs. 
+Please adjust project name and environment variables, depending on your needs.
 
 After which you can use make commands from project's root folder.
 To deploy whole infrastructure and have running Wordpress blogging platform you will need to initialize terraform first,
 for that please use:
 
-`make init`
+`terraform init`
 
 After which you will be ready to deploy project to your AWS account with command:
 
-`make deploy`
+`terraform plan`
+
+and 
+
+`terraform apply`
 
 After approximately 15-16 minutes deployment would be done, and you can find DNS name of Application Load Balancer in the output (alb_dns_name), or in AWS Web Console / EC2 / Load Balancers. It should look like this: http://wp-blog-dev-alb-XXXXXXXX.us-east-1.elb.amazonaws.com/ and you should be able to access the deployed website in your browser.
 
 If you need to tear everything down use:
 
-`make destroy`
+`terraform destroy`
 
 If you want to completely get rid of everything make sure to manually delete remaining CloudWatch Log Groups. 
 
