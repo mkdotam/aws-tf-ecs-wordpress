@@ -93,11 +93,12 @@ Following AWS Services would be created:
 * RDS
   * Aurora Serverless cluster
   * Secret stored AWS Secret Manager
-* Lambda
 
 ---
 Further Improvements:
 - Review IAM roles and tighten Security Groups, to allow traffic only from respective Security Groups.
+- Add custom domain (Route53) and SSL Certificate using AWS ACM. 
 - Create CloudWatch Dashboards and Alerts, setup SNS to deliver alerts to email.
 ---
+
 Enjoy & have fun!
